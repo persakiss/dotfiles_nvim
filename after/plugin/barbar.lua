@@ -44,12 +44,11 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 
 -- Sort buffers based on different criteria using combinations with Space
-map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)  -- Sort by buffer number
-map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)      -- Sort by directory
-map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)       -- Sort by language
-map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)   -- Sort by window number
+map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts) -- Sort by buffer number
+map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)    -- Sort by directory
+map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)     -- Sort by language
+map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts) -- Sort by window number
 
 -- Additional Barbar commands (for reference)
 -- :BarbarEnable - Enables Barbar (default behavior)
 -- :BarbarDisable - Discouraged command, should avoid using
-
