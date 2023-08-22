@@ -53,4 +53,5 @@ use({
   use 'romgrk/barbar.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'terrortylor/nvim-comment'
+  use 'wakatime/vim-wakatime'
 end)
