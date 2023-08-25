@@ -15,14 +15,14 @@ return require('packer').startup(function(use)
 
   use({ 'rose-pine/neovim', as = 'rose-pine', config = function() vim.cmd('colorscheme rose-pine') end })
 
-use({
-  'nvim-treesitter/nvim-treesitter',
-  run = ':TSUpdate',
-  requires = {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    'nvim-treesitter/nvim-treesitter-textobjects' -- This is an existing dependency you had, so I'm including it for completeness
-  }
-})
+  use({
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+      'nvim-treesitter/nvim-treesitter-textobjects' -- This is an existing dependency you had, so I'm including it for completeness
+    }
+  })
 
   use('nvim-treesitter/playground')
   use('mbbill/undotree')
@@ -54,4 +54,10 @@ use({
   use 'nvim-tree/nvim-web-devicons'
   use 'terrortylor/nvim-comment'
   use 'wakatime/vim-wakatime'
+  use 'gko/vim-coloresque'
+
+  use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
+  use 'mlaursen/vim-react-snippets'
+  use 'm4xshen/autoclose.nvim'
 end)
