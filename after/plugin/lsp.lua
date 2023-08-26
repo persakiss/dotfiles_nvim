@@ -7,7 +7,7 @@ lsp.ensure_installed({
 	'eslint',
 	'lua_ls',
 	'rust_analyzer',
-
+  'cssls',
 })
 
 local cmp = require('cmp')
@@ -18,6 +18,24 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-y>'] = cmp.mapping.confirm({ select = true }),
 	['<C-Space>'] = cmp.mapping.complete(),
 })
+
+local nvim_lsp = require('lspconfig')
+
+nvim_lsp.cssls.setup{
+    cmd = { "vscode-css-language-server", "--stdio" },
+    filetypes = { "css", "scss", "less" },
+    settings = {
+        css = {
+            validate = true
+        },
+        less = {
+            validate = true
+        },
+        scss = {
+            validate = true
+        }
+    }
+}
 
 lsp.set_preferences({
 	sign_icons = { }
