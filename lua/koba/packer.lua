@@ -69,4 +69,14 @@ return require('packer').startup(function(use)
   })
   use "rafamadriz/friendly-snippets"
   use('saadparwaiz1/cmp_luasnip')
+  use({
+	"Pocco81/auto-save.nvim",
+	config = function()
+		 require("auto-save").setup {
+			-- your config goes here
+			-- or just leave it empty :)
+		 }
+	end,
+})
+
 end)

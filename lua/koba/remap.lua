@@ -65,6 +65,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/koba/packer.lua<CR>")
 
 
+-- Toggle auto save
+vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
+
 -- In normal mode, pressing leader twice will source the current file (usually for configurations).
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
