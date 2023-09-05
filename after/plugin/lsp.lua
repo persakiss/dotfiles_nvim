@@ -14,8 +14,6 @@ lsp.ensure_installed({
   'svelte',
   'tailwindcss',
   'astro',
-  'ccls',
-
 })
 
 local cmp = require('cmp')
