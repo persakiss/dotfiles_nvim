@@ -8,6 +8,14 @@ lsp.ensure_installed({
 	'lua_ls',
 	'rust_analyzer',
   'cssls',
+  'html',
+  'texlab',
+  'sqlls',
+  'svelte',
+  'tailwindcss',
+  'astro',
+  'ccls',
+
 })
 
 local cmp = require('cmp')
