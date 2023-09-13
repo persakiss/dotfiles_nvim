@@ -11,7 +11,8 @@
 
 ## Custom Mappings
 
-- `Space + pv`: Execute the Ex command.
+- `Space + ps`: Execute fuzzy finder (ps = project search)
+- `Space + pv`: Execute the Ex command (pv = project view)
 - `Space + p`: In visual mode, paste over the selected text without overwriting the clipboard.
 - `Space + y`: Copy to the system clipboard.
 - `Space + Y`: Yank (copy) the entire line to the system clipboard.
