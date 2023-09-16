@@ -23,6 +23,7 @@
 - `Space + vpp`: Open personal configuration for "packer.lua".
 - `Space + Space`: Source the current file (usually for configurations).
 - `Space + t`: Open a bottom-split terminal.
+- `Space + sw`: Set word-wrap with line-break
 
 ## Line Movement Mappings
 
