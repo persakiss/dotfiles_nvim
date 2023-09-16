@@ -76,3 +76,9 @@ end)
 -- <leader>t brings up a bottom-split terminal
 vim.api.nvim_set_keymap('n', '<leader>t', ':bo sp | terminal<CR>', { noremap = true, silent = true })
 
+-- In normal mode, pressing leader followed by "sw" will set wrap and linebreak.
+vim.keymap.set("n", "<leader>sw", function()
+    vim.cmd("set wrap")
+    vim.cmd("set linebreak")
+end)
+
