@@ -56,7 +56,6 @@ return require('packer').startup(function(use)
   use 'wakatime/vim-wakatime'
   use 'gko/vim-coloresque'
 
-  use 'SirVer/ultisnips'
   use 'mlaursen/vim-react-snippets'
   use 'm4xshen/autoclose.nvim'
 
@@ -80,7 +79,42 @@ return require('packer').startup(function(use)
   })
   use({
     'barrett-ruth/live-server.nvim',
-    run = 'yarn global add live-server',     -- use 'run' for post-installation commands
+    run = 'yarn global add live-server', -- use 'run' for post-installation commands
     config = 'require("live-server").setup()'
   })
+
+  -- used by both prior config and the extra
+  -- settings are for vimtex setup
+  use {
+    'sirver/ultisnips',
+    config = function()
+      vim.g.UltiSnipsExpandTrigger = '<tab>'
+      vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
+      vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    end
+  }
+
+  use {
+    'lervag/vimtex',
+    config = function()
+      vim.g.tex_flavor = 'latex'
+      vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_quickfix_mode = 0
+    end
+  }
+  use {
+    'KeitaNakamura/tex-conceal.vim',
+    config = function()
+      vim.cmd('set conceallevel=1')
+      vim.g.tex_conceal = 'abdmg'
+      vim.cmd('hi Conceal ctermbg=none')
+    end
+  }
+
+  -- general config not related to a specific plugin
+  vim.cmd([[
+    setlocal spell
+    set spelllang=en_us
+    inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+    ]])
 end)
